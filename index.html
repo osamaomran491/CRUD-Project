@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container p-5">
+        <h1>Product Management System</h1>
+        <div class="form-group m-4">
+            <label for="productName">Product Name</label>
+            <input oninput="invalidName()" type="text" name="" id="productName" class="form-control" placeholder="Enter Product Name">
+            <p id="invalidName" class="text-danger d-none">Please Enter First Capital Charcater</p>
+        </div>
+        <div class="form-group m-4">
+            <label for="productprice">Product Price</label>
+            <input oninput="invalidPrice()" type="number" name="" id="productPrice" class="form-control" placeholder="Enter Product Price">
+            <p id="invalidPrice" class="text-danger d-none">Please Enter Price</p>
+        </div>
+        <div class="form-group m-4">
+            <label for="productCateg">Product Category</label>
+            <input oninput="invalidCategory()" type="text" name="" id="productCateg" class="form-control" placeholder="Enter Product Category">
+            <p id="invalidCategory" class="text-danger d-none">Please Enter First Capital Charcater</p>
+        </div>
+        <div class="form-group m-4">
+            <label for="productDescription">Product Description</label>
+            <input oninput="invalidDescription()" type="text" name="" id="productDescription" class="form-control" placeholder="Enter Product Description">
+            <p id="invalidDescription" class="text-danger d-none">Please Enter First Capital Charcater</p>
+        </div>
+        <button  onclick="addProduct()" class="btn btn-dark" > Add Product</button>
+        <button class="btn btn-warning d-none" id="saveBt" onclick="saveChanges()" >Save Changes</button>
+        <input type="text" class="form-control m-4" oninput="searchProduct(this.value)" placeholder="Search with Product Name">
+    </div>
+   <table class="table text-center text-white">
+        <thead>
+            <th>Index</th>
+            <th>Product Name</th>
+            <th>Product price</th>
+            <th>Product Category</th>
+            <th>Product Cescription</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+        </thead>
+        <tbody id="data">
+          
+        </tbody>
+    </table>
+    <script src="./Js/bootstrap.bundle.min.js"></script>
+    <script src="./Js/main.js"></script>
+</body>
+</html>
