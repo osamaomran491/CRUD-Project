@@ -97,7 +97,7 @@ function searchProduct(data){
     }
 }
 function invalidName(){
-    var regex = /[A-Za-z]/;
+    var regex = /[A-Z]/;
     if(regex.test(productName.value)){
         productName.style.border = "none"
         document.getElementById("invalidName").classList.add("d-none")
@@ -124,7 +124,7 @@ function invalidPrice() {
  } 
  
    function invalidCategory() {
-     var regex = /[A-Za-z]/;
+     var regex = /[A-Z]/;
     
       if (regex.test(productCategory.value)) {
         productCategory.style.border= "none"
@@ -140,7 +140,7 @@ function invalidPrice() {
  } 
  
  function invalidDescription() {
-    var regex = /[A-Za-z]/;
+    var regex = /[A-Z]/;
    
      if (regex.test(productDescription.value)) {
        productDescription.style.border= "none"
